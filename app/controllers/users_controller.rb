@@ -25,12 +25,12 @@ class UsersController < ApplicationController
    end
 
    get '/login' do
-       if !logged_in?
-         erb :'users/login'
-       else
-         redirect to '/tweets'
-       end
+     if logged_in?
+      redirect '/tweets'
+     else
+       erb :'/users/login'
      end
+   end
 
      post '/login' do
        user = User.find_by(:username => params[:username])
