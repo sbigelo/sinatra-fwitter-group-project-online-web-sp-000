@@ -1,8 +1,9 @@
-<h1> Welcome, <%= current_user.username %> </h1>
-<h2> Tweets <h2>
 
-  <% @tweets.each do |key| %>
+<p> Welcome, <%= current_user.username %>
+<h2> Tweets </h2>
+
+<% @tweets.each do |tweet| %>
   <div>
-<p> <%= key.content %> </p>
-</div>
-  <% end %>
+    <%= tweet.content %>
+  </div>
+<% end %>
