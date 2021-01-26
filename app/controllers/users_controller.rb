@@ -4,4 +4,8 @@ class UsersController < ApplicationController
     erb :'/users/create_user'
   end
 
+  post '/signup' do
+    redirect to '/index'
+  end
+
 end
